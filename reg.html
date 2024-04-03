@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ru" >
+<head>
+<meta charset="UTF-8">
+<title>Название страницы - отображается на вкладке браузера и в поиске</title>
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<header class="header">
+<nav class="nav">
+<a href="index.html" class="nav-item">Главная</a>
+<a href="#posts" class="nav-item">Товары</a>
+<a href="rev.html" class="nav-item">Отзывы</a>
+<a href="#footer" class="nav-item">Контакты</a>
+</nav>
+<nav class="nav">
+<a href="vhod.html" class="nav-item">Вход</a>
+<a href="reg.html" class="nav-item">Регистрация</a>
+<a href="search.html" class="nav-item">Поиск</a>
+</nav>
+</head>
+    <style>
+        body {
+            background-color: #fff8cc; 
+            color: #fff; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="http://127.0.0.1:5500" method="POST">   <!-- МЕТОД!!! -->
+            <div class="form-group">
+                <label for="surname">Фамилия:</label>
+                <input type="text" class="form-control" id="surname" name="surname" value="Саттарова" pattern="[а-яА-ЯёЁ]+" title="Введите только буквы русского алфавита">
+            </div>
+            <div class="form-group">
+                <label for="name">Имя:</label>
+                <input type="text" class="form-control" id="name" name="name" value="Камиля" pattern="[а-яА-ЯёЁ]+" title="Введите только буквы русского алфавита">
+            </div>
+            <div class="form-group">
+                <label for="patronymic">Отчество:</label>
+                <input type="text" class="form-control" id="patronymic" name="patronymic" value="Рамилевна" pattern="[а-яА-ЯёЁ]+" title="Введите только буквы русского алфавита">
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" class="form-control" id="email" name="email" value="kammi@yandex.ru">
+            </div>
+            
+            <div class="form-group">
+                <label for="country">Выбор страны:</label>
+                <select class="form-control" id="country" name="country" value="Россия">
+                    <option value="Russia" selected>Россия</option>
+                    <option value="UK" >Монголия</option>
+                    <option value="BEL" >Китай</option>
+                    <option value="AMER" >Америка</option>
+                    <option value="ANGL" >Англия</option>
+                    <option value="USA" >США</option>
+                    <option value="KAN" >Австрия</option>
+                    <option value="GER" >Германия</option>
+                    <option value="GR" >Грузия</option>
+                    <option value="AZ" >Азербайджан</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Выбор города:</label><br>
+                <input type="radio" id="kazan" name="city" value="Казань" checked>
+                <label for="kazan">Казань</label><br>
+                <input type="radio" id="moscow" name="city" value="Омск">
+                <label for="moscow">Омск</label><br>
+                <input type="radio" id="piter" name="city" value="Нурлат">
+                <label for="piter">Нурлат</label><br>
+                <input type="radio" id="prip" name="city" value="Мурманск">
+                <label for="prip">Мурманск</label><br>
+                <input type="radio" id="raz" name="city" value="Самара">
+                <label for="raz">Самара</label><br>
+            </div>
+            <div class="form-group">
+                <label>Выбор языка:</label><br>
+                <input type="checkbox" id="russian" name="language" value="русский" checked>
+                <label for="russian">Русский</label><br>
+                <input type="checkbox" id="english" name="language" value="английский" checked>
+                <label for="english">английский</label><br>
+                <input type="checkbox" id="elf" name="language" value="татарский" >
+                <label for="elf">татарский</label><br>
+                <input type="checkbox" id="japanes" name="language" value="немецкий" >
+                <label for="japanes">немецкий</label><br>
+                <input type="checkbox" id="ukr" name="language" value="чувашский" >
+                <label for="ukr">чувашский</label><br>                
+            </div>
+            <div class="form-group">
+                <label for="profession">Выбор профессий:</label>
+                <select class="form-control" id="profession" name="profession" multiple>
+                    <option value="программист" selected>Программист</option>
+                    <option value="гадалка" >гадалка</option>
+                    <option value="дизайнер" >дизайнер</option>
+                    <option value="курьер" >курьер</option>
+                    <option value="тестеровщик">тестеровщик</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="password">Пароль:</label>
+                <input type="password" class="form-control" id="password" name="password" value="lolkek">
+            </div>
+            <div class="form-group">
+                <label for="additional-info">Дополнительная информация:</label>
+                <textarea class="form-control" id="additional-info" name="additional-info" rows="4" cols="50">Подарите косметику кайли дженер пж пж</textarea>
+            </div>
+            <input type="hidden" name="student" value="Алмаз">
+            <button type="submit" class="btn btn-primary">Зарегистрироваться</button>
+            <button type="reset" class="btn btn-danger">Очистить форму</button>
+        </form>
+    </div>
+
+    <div class="container mt-4">
+        <a href="get.html" class="btn btn-success">Изменить метод на GET</a>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #fff8cc; 
+            color: #000000; 
+        }
+    </style>
+</head>
+<body>
+
+    <body>
+        <div class="container">
+            <button onclick="openRegistrationForm()">Открыть в отдельном окне</button>
+        </div>
+    
+        <script>
+            function openRegistrationForm() {
+                // Определяем параметры окна
+                var options = 'left=100,top=100,width=500,height=600,toolbar=no,menubar=no,status=yes,location=no,resizable=yes,scrollbars=yes';
+                // Открываем форму в новом окне
+                var registrationFormWindow = window.open('reg.html', 'Registration Form', options);
+            }
+        </script>
+    
+    
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
+
+</html>

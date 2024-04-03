@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru" >
+<head>
+<meta charset="UTF-8">
+<title>Название страницы - отображается на вкладке браузера и в поиске</title>
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<header class="header">
+<nav class="nav">
+<a href="index.html" class="nav-item">Главная</a>
+<a href="#posts" class="nav-item">Товары</a>
+<a href="rev.html" class="nav-item">Отзывы</a>
+<a href="#footer" class="nav-item">Контакты</a>
+</nav>
+<nav class="nav">
+<a href="vhod.html" class="nav-item">Вход</a>
+<a href="reg.html" class="nav-item">Регистрация</a>
+<a href="search.html" class="nav-item">Поиск</a>
+</nav>
+</head>
+    <style>
+        body {
+            background-color: #fff8cc; 
+            color: #bdc7ff; 
+        }
+        .btn {
+        background-color: #bdc7ff;
+    }
+    </style>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 text-center">
+                <h2 class="mt-3 mb-4">Мой профиль</h2>
+                <div class="info">
+                    <p>Логин: <span id="login">USERNAME</span></p>
+                    <p>Год рождения: <span id="birthYear">YEAR</span></p>
+                    <p>Город проживания: <span id="city">CITY</span></p>
+                    <p>Пол: <span id="gender">GENDER</span></p>
+                </div>
+                <div class="btn-group btn-group-lg" role="group" aria-label="Кнопки">
+                    <button type="button" class="btn btn-primary">Изменить пароль</button>
+                    <button type="button" class="btn btn-primary">Настройки</button>
+                    <button type="button" class="btn btn-primary">Мои заказы</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('login').innerText = generateRandomLogin();
+        document.getElementById('birthYear').innerText = generateRandomYear();
+        document.getElementById('city').innerText = generateRandomCity();
+        document.getElementById('gender').innerText = generateRandomGender();
+
+        function generateRandomLogin() {
+            return 'user_' + Math.floor(Math.random() * 10000);
+        }
+
+        function generateRandomYear() {
+            return Math.floor(Math.random() * (2000 - 1950 + 1)) + 1950;
+        }
+
+        function generateRandomCity() {
+            var cities = ['Москва', 'Санкт-Петербург', 'Новосибирск', 'Екатеринбург', 'Казань', 'Челябинск', 'Омск', 'Самара', 'Ростов-на-Дону', 'Уфа'];
+            return cities[Math.floor(Math.random() * cities.length)];
+        }
+
+        function generateRandomGender() {
+            var genders = ['Мужской', 'Женский'];
+            return genders[Math.floor(Math.random() * genders.length)];
+        }
+    </script>
+</body>
+</html>

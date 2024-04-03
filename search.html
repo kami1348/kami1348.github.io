@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru" >
+<head>
+<meta charset="UTF-8">
+<title>Название страницы - отображается на вкладке браузера и в поиске</title>
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<header class="header">
+<nav class="nav">
+<a href="index.html" class="nav-item">Главная</a>
+<a href="#posts" class="nav-item">Товары</a>
+<a href="rev.html" class="nav-item">Отзывы</a>
+<a href="#footer" class="nav-item">Контакты</a>
+</nav>
+<nav class="nav">
+<a href="vhod.html" class="nav-item">Вход</a>
+<a href="reg.html" class="nav-item">Регистрация</a>
+<a href="search.html" class="nav-item">Поиск</a>
+</nav>
+</head>
+
+<style>
+    body {
+        background-color: #fff8cc; 
+    }
+
+    .btn {
+        background-color: #bdc7ff;
+    }
+
+</style>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center mt-5">
+            <div class="col-md-6">
+                <!-- Форма для поиска в различных поисковых системах -->
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Поиск в различных поисковых системах</h5>
+                        <form action="https://www.yandex.ru/search/" method="GET" target="_blank" class="mb-3">
+                            <div class="form-group">
+                                <label for="yandex_query">Yandex:</label>
+                                <input type="text" id="yandex_query" name="text" placeholder="Поиск в Yandex" class="form-control">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Искать</button>
+                        </form>
+                        <form action="http://rambler.ru/cgi-bin/search" method="GET" target="_blank" class="mb-3">
+                            <div class="form-group">
+                                <label for="rambler_query">Rambler:</label>
+                                <input type="text" id="rambler_query" name="text" placeholder="Поиск в Rambler" class="form-control">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Искать</button>
+                        </form>
+                        <form action="https://www.google.com/search" method="GET" target="_blank" class="mb-3">
+                            <div class="form-group">
+                                <label for="google_query">Google:</label>
+                                <input type="text" id="google_query" name="text" placeholder="Поиск в Google" class="form-control">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Искать</button>
+                        </form>
+                        <form action="http://www.filesearch.ru/search.cgi" method="GET" target="_blank" class="mb-3">
+                            <div class="form-group">
+                                <label for="filesearch_query">Filesearch:</label>
+                                <input type="text" id="filesearch_query" name="text" placeholder="Поиск в Filesearch" class="form-control">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Искать</button>
+                        </form>
+                    
+                </div>
+                <!-- Форма для фильтрации -->
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Фильтрация результатов</h5>
+                        <form class="mb-3">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Введите запрос">
+                            </div>
+                            <div class="form-group">
+                                <select class="form-control">
+                                    <option selected disabled>Выберите категорию</option>
+                                    <option>Уход за лицом</option>
+                                    <option>Уход за телом</option>
+                                    <option>Косметика</option>
+                                    <option>Парфюмерия</option>
+                                    <option>Подарочные наборы</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="priceRange">Фильтр по цене:</label>
+                                <input type="range" class="form-control-range" id="priceRange" min="0" max="1000" step="10">
+                            </div>
+                            <button type="button" class="btn btn-lg btn-block btn-info" onclick="redirectToKabinet()">Вход</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
